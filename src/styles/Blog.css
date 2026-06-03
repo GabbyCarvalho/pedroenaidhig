@@ -1,0 +1,291 @@
+/* ===================== BLOG HERO ===================== */
+.blogHero {
+  position: relative;
+  height: 340px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: var(--marinho-principal);
+}
+
+.blogHeroBg {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(135deg, rgba(20, 64, 98, 0.95) 0%, rgba(10, 35, 55, 0.98) 100%);
+  z-index: 0;
+}
+
+/* linha decorativa dourada */
+.blogHero::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background-color: var(--marrom-detalhes);
+}
+
+.blogHeroContent {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 0 1.5rem;
+}
+
+.blogHeroTag {
+  display: inline-block;
+  font-family: var(--fonte-textos);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--marrom-detalhes);
+  margin-bottom: 1rem;
+}
+
+.blogHeroTitle {
+  font-family: var(--fonte-titulos);
+  font-size: clamp(2.8rem, 6vw, 4.5rem);
+  font-weight: 600;
+  color: var(--light2);
+  line-height: 1.1;
+  margin-bottom: 1rem;
+  letter-spacing: 0.04em;
+}
+
+.blogHeroSub {
+  font-family: var(--fonte-textos);
+  font-size: 1rem;
+  color: var(--light1);
+  opacity: 0.8;
+  max-width: 500px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* ===================== FILTROS ===================== */
+.blogFiltersSection {
+  background-color: var(--light2);
+  padding: 2.5rem 0 1rem;
+  border-bottom: 1px solid rgba(20, 64, 98, 0.1);
+}
+
+.blogContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.blogFilters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.blogFilterBtn {
+  font-family: var(--fonte-textos);
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  padding: 0.45rem 1.1rem;
+  border: 1px solid rgba(20, 64, 98, 0.25);
+  border-radius: 2px;
+  background: transparent;
+  color: var(--marinho-principal);
+  cursor: pointer;
+  transition: all 0.22s ease;
+}
+
+.blogFilterBtn:hover {
+  border-color: var(--marrom-detalhes);
+  color: var(--marrom-detalhes);
+}
+
+.blogFilterBtn.active {
+  background-color: var(--marinho-principal);
+  border-color: var(--marinho-principal);
+  color: var(--light2);
+}
+
+/* ===================== GRID ===================== */
+.blogGridSection {
+  background-color: var(--light2);
+  padding: 3rem 0 5rem;
+}
+
+.blogGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+}
+
+.blogEmpty {
+  font-family: var(--fonte-textos);
+  color: var(--marinho-principal);
+  opacity: 0.6;
+  text-align: center;
+  padding: 3rem 0;
+}
+
+/* ===================== CARD ===================== */
+.blogCard {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease;
+}
+
+.blogCard:hover {
+  transform: translateY(-4px);
+}
+
+/* Imagem */
+.blogCardImage {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: 2px;
+}
+
+.blogCardImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.blogCard:hover .blogCardImage img {
+  transform: scale(1.04);
+}
+
+.blogCardImagePlaceholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, var(--marinho-principal) 0%, #0a2337 100%);
+}
+
+/* Overlay com categoria */
+.blogCardOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(14, 42, 66, 0.85) 0%,
+    rgba(14, 42, 66, 0.3) 50%,
+    transparent 100%
+  );
+  display: flex;
+  align-items: flex-end;
+  padding: 1.2rem;
+  transition: background 0.3s ease;
+}
+
+.blogCard:hover .blogCardOverlay {
+  background: linear-gradient(
+    to top,
+    rgba(14, 42, 66, 0.92) 0%,
+    rgba(14, 42, 66, 0.45) 60%,
+    transparent 100%
+  );
+}
+
+.blogCardCategory {
+  font-family: var(--fonte-titulos);
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: var(--light2);
+  line-height: 1.3;
+
+  /* linha dourada embaixo do texto da categoria */
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--marrom-detalhes);
+}
+
+/* Conteúdo abaixo da imagem */
+.blogCardContent {
+  padding: 1rem 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.blogCardCategoryTag {
+  font-family: var(--fonte-textos);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--marrom-detalhes);
+}
+
+.blogCardTitle {
+  font-family: var(--fonte-titulos);
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--marinho-principal);
+  line-height: 1.35;
+  transition: color 0.2s ease;
+}
+
+.blogCard:hover .blogCardTitle {
+  color: var(--marrom-detalhes);
+}
+
+.blogCardDate {
+  font-family: var(--fonte-textos);
+  font-size: 0.82rem;
+  color: var(--marinho-principal);
+  opacity: 0.55;
+}
+
+/* ===================== RESPONSIVO ===================== */
+@media (max-width: 900px) {
+  .blogGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 540px) {
+  .blogHero {
+    height: 260px;
+  }
+
+  .blogGrid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .blogFiltersSection {
+    padding: 1.5rem 0 0.8rem;
+  }
+
+  .blogGridSection {
+    padding: 2rem 0 4rem;
+  }
+}
+
+.blogLoading {
+  min-height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.blogLoadingSpinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid rgba(20, 64, 98, 0.15);
+  border-top-color: var(--marinho-principal);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}

@@ -1,0 +1,256 @@
+/* ===================== AREAS.CSS ===================== */
+
+/* ── INTRO / HERO ── */
+.areasIntro {
+  position: relative;
+  background-color: var(--marinho-principal);
+  padding: 7rem 2rem 6rem;
+  overflow: hidden;
+}
+
+.areasIntroBg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 80% 50%, rgba(202,148,87,0.13) 0%, transparent 60%),
+    radial-gradient(ellipse at 10% 80%, rgba(202,148,87,0.07) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+
+.areasIntroInner {
+  position: relative;
+  max-width: 760px;
+}
+
+.areasIntroTitle {
+  font-family: var(--fonte-titulos);
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 600;
+  color: var(--light2);
+  line-height: 1.15;
+  margin-bottom: 1.4rem;
+}
+
+.areasIntroSub {
+  font-family: var(--fonte-textos);
+  font-size: 1.05rem;
+  color: rgba(237,237,232,0.75);
+  line-height: 1.75;
+  margin-bottom: 2.5rem;
+  max-width: 620px;
+}
+
+.areasIntroActions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* ── GRID DE ÁREAS ── */
+.areasGridSection {
+  background-color: #f5f5f2;
+  padding: 5rem 0 6rem;
+}
+
+.areasGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+}
+
+/* ── CARD ── */
+.areaCard {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  text-decoration: none;
+  box-shadow: 0 2px 12px rgba(20,40,80,0.07);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(20,64,98,0.07);
+}
+
+.areaCard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(20,40,80,0.14);
+}
+
+.areaCard:hover .areaCardOverlay {
+  opacity: 0.55;
+}
+
+.areaCard:hover .areaCardTitulo {
+  bottom: 1.4rem;
+}
+
+.areaCard:hover .areaCardCta {
+  color: var(--marrom-detalhes);
+  gap: 0.6rem;
+}
+
+/* ── IMAGEM DO CARD ── */
+.areaCardImgWrap {
+  position: relative;
+  width: 100%;
+  /* altura fixa: encaixa tanto fotos horizontais quanto verticais */
+  height: 220px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.areaCardImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.areaCard:hover .areaCardImg {
+  transform: scale(1.05);
+}
+
+.areaCardImgPlaceholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, var(--marinho-principal) 0%, #1a3a5c 100%);
+  display: flex;
+  align-items: flex-end;
+  padding: 1.2rem;
+}
+
+.areaCardImgPlaceholder span {
+  font-family: var(--fonte-titulos);
+  font-size: 1.2rem;
+  color: rgba(255,255,255,0.2);
+}
+
+/* gradiente sobre a imagem */
+.areaCardOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 30%,
+    rgba(14, 34, 56, 0.75) 100%
+  );
+  opacity: 0.45;
+  transition: opacity 0.3s ease;
+}
+
+/* título sobre a imagem */
+.areaCardTitulo {
+  position: absolute;
+  left: 1.2rem;
+  right: 1.2rem;
+  bottom: 1.1rem;
+  font-family: var(--fonte-titulos);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #fff;
+  line-height: 1.25;
+  transition: bottom 0.3s ease;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+
+/* ── BODY DO CARD ── */
+.areaCardBody {
+  padding: 1.4rem 1.5rem 1.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex: 1;
+}
+
+.areaCardResumo {
+  font-family: var(--fonte-textos);
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.65;
+  flex: 1;
+}
+
+.areaCardCta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--fonte-textos);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--marinho-principal);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  transition: color 0.25s ease, gap 0.25s ease;
+}
+
+/* linha dourada no rodapé do card */
+.areaCardBody::after {
+  content: "";
+  display: block;
+  width: 2.5rem;
+  height: 2px;
+  background-color: var(--marrom-detalhes);
+  border-radius: 2px;
+  margin-top: auto;
+  transition: width 0.3s ease;
+}
+
+.areaCard:hover .areaCardBody::after {
+  width: 100%;
+}
+
+/* ── CTA BANNER ── */
+.areasCTA {
+  background-color: var(--marinho-principal);
+  padding: 4rem 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.areasCTA::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 90% 50%, rgba(202,148,87,0.12) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.areasCTAInner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+/* ── RESPONSIVO ── */
+@media (max-width: 1024px) {
+  .areasGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .areasIntro {
+    padding: 5rem 1.5rem 4rem;
+  }
+
+  .areasGrid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .areaCardImgWrap {
+    height: 200px;
+  }
+
+  .areasCTAInner {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+}

@@ -1,0 +1,318 @@
+/* ===================== LOADING ===================== */
+.postLoading {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.postLoadingSpinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid rgba(20, 64, 98, 0.15);
+  border-top-color: var(--marinho-principal);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ===================== NOT FOUND ===================== */
+.postNotFound {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  font-family: var(--fonte-titulos);
+  color: var(--marinho-principal);
+  font-size: 1.5rem;
+}
+
+/* ===================== HERO ===================== */
+.postHero {
+  position: relative;
+  height: 480px;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+}
+
+.postHeroImg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.postHeroPlaceholder {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, var(--marinho-principal) 0%, #0a2337 100%);
+}
+
+.postHeroOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(10, 30, 50, 0.92) 0%,
+    rgba(10, 30, 50, 0.5) 50%,
+    rgba(10, 30, 50, 0.2) 100%
+  );
+}
+
+.postHeroContent {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 2rem 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+/* Botão voltar */
+.postBackBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--fonte-textos);
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  color: var(--light1);
+  text-decoration: none;
+  opacity: 0.7;
+  transition: opacity 0.2s ease, color 0.2s ease;
+  margin-bottom: 0.4rem;
+}
+
+.postBackBtn:hover {
+  opacity: 1;
+  color: var(--marrom-detalhes);
+}
+
+.postHeroCategory {
+  font-family: var(--fonte-textos);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--marrom-detalhes);
+}
+
+.postHeroTitle {
+  font-family: var(--fonte-titulos);
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  font-weight: 600;
+  color: var(--light2);
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+}
+
+.postHeroMeta {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  font-family: var(--fonte-textos);
+  font-size: 0.82rem;
+  color: var(--light1);
+  opacity: 0.65;
+}
+
+.postHeroMeta span {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+/* ===================== CONTEÚDO ===================== */
+.postSection {
+  background-color: var(--light2);
+  padding: 4rem 0;
+}
+
+.postContainer {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.postExcerpt {
+  font-family: var(--fonte-titulos);
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: var(--marinho-principal);
+  line-height: 1.7;
+  border-left: 3px solid var(--marrom-detalhes);
+  padding-left: 1.4rem;
+  margin-bottom: 2.5rem;
+  font-style: italic;
+}
+
+/* Portable Text body */
+.postBody {
+  font-family: var(--fonte-textos);
+  font-size: 1rem;
+  color: #2a2a2a;
+  line-height: 1.85;
+}
+
+.postBody p {
+  margin-bottom: 1.4rem;
+}
+
+.postBody h2 {
+  font-family: var(--fonte-titulos);
+  font-size: 1.7rem;
+  font-weight: 600;
+  color: var(--marinho-principal);
+  margin: 2.5rem 0 1rem;
+  letter-spacing: 0.02em;
+}
+
+.postBody h3 {
+  font-family: var(--fonte-titulos);
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--marinho-principal);
+  margin: 2rem 0 0.8rem;
+}
+
+.postBody h4 {
+  font-family: var(--fonte-textos);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--marinho-principal);
+  margin: 1.5rem 0 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.postBody blockquote {
+  border-left: 3px solid var(--marrom-detalhes);
+  padding: 0.8rem 1.4rem;
+  margin: 2rem 0;
+  font-family: var(--fonte-titulos);
+  font-size: 1.15rem;
+  font-style: italic;
+  color: var(--marinho-principal);
+  background-color: rgba(20, 64, 98, 0.04);
+  border-radius: 0 2px 2px 0;
+}
+
+.postBody strong {
+  font-weight: 700;
+  color: var(--marinho-principal);
+}
+
+.postBodyImage {
+  margin: 2rem 0;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.postBodyImage img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ===================== CTA ===================== */
+.postCta {
+  background-color: var(--marinho-principal);
+  padding: 5rem 2rem;
+}
+
+.postCtaContent {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.postCtaTag {
+  font-family: var(--fonte-textos);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--marrom-detalhes);
+}
+
+.postCtaTitle {
+  font-family: var(--fonte-titulos);
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 600;
+  color: var(--light2);
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+}
+
+.postCtaSub {
+  font-family: var(--fonte-textos);
+  font-size: 1rem;
+  color: var(--light1);
+  opacity: 0.8;
+  line-height: 1.7;
+  max-width: 520px;
+}
+
+.postCtaActions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+
+/* Reutiliza btnPrimary e btnOutline do global */
+.postCta .btnOutline {
+  border-color: rgba(237, 237, 232, 0.4);
+  color: var(--light2);
+}
+
+.postCta .btnOutline:hover {
+  border-color: var(--marrom-detalhes);
+  color: var(--marrom-detalhes);
+}
+
+/* ===================== RESPONSIVO ===================== */
+@media (max-width: 768px) {
+  .postHero {
+    height: 420px;
+  }
+
+  .postHeroContent {
+    padding: 0 1.5rem 2.5rem;
+  }
+
+  .postSection {
+    padding: 2.5rem 0;
+  }
+
+  .postCta {
+    padding: 3.5rem 1.5rem;
+  }
+
+  .postCtaActions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .postCtaActions a {
+    width: 100%;
+    justify-content: center;
+  }
+}

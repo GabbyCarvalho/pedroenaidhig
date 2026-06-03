@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;500;600;700&display=swap'); 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --marinho-principal: #144062;
+  --marrom-detalhes: #ca9457;
+  --light1: #d9d9d9;
+  --light2: #edede8;
+  --fonte-titulos: 'Cormorant Garamond', serif;
+  --fonte-textos: 'Source Sans 3', sans-serif;
+  --fonte-navbar :  'Montserrat', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding-top: 120px; 
+  background-color: var(--light2);
+  font-family: var(--fonte-textos);
+}
+
+/* ===================== HEADER ===================== */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 120px;
+  width: 100%;
+  z-index: 1000;
+  background-color: var(--marinho-principal);
+  box-shadow: 0 2px 16px rgba(20, 64, 98, 0.18);
+}
+
+.topBar {
+  height: 100%;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding: 0 3rem;
+  gap: 2rem;
+}
+
+/* LOGO */
+.logo {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.logo img {
+  height: 110px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* NAV LINKS */
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  flex-wrap: nowrap;
+}
+
+.navLinks a {
+  text-decoration: none;
+  color: var(--light2);
+  font-family: var(--fonte-titulos);
+  font-size: 1.2rem;
+  font-weight: 300;
+  letter-spacing: 0.08em;
+  white-space: nowrap;
+  position: relative;
+  transition: color 0.25s ease;
+}
+
+.navLinks a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: var(--marrom-detalhes);
+  transition: width 0.3s ease;
+}
+
+.navLinks a:hover {
+  color: var(--marrom-detalhes);
+}
+
+.navLinks a:hover::after {
+  width: 100%;
+}
+
+/* SOCIAL ICONS */
+.navSocials {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-shrink: 0;
+}
+
+.navSocials a {
+  color: var(--light2);
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  transition: color 0.25s ease, transform 0.2s ease;
+}
+
+.navSocials a:hover {
+  color: var(--marrom-detalhes);
+  transform: translateY(-2px);
+}
+
+/* HAMBURGER */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.hamburger span {
+  display: block;
+  width: 26px;
+  height: 2px;
+  background-color: var(--light2);
+  border-radius: 2px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ===================== MAIN ===================== */
+.mainContent {
+  min-height: calc(100vh - 120px);
+}
+
+/* ===================== FOOTER ===================== */
+.footer {
+  background-color: var(--marinho-principal);
+  color: var(--light2);
+  padding: 3.5rem 3rem 2rem;
+}
+
+.footerContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1.4fr;
+  gap: 2.5rem;
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid rgba(202, 148, 87, 0.3);
+}
+
+/* Coluna genérica */
+.footerCol {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.footerCol a {
+  color: var(--light1);
+  text-decoration: none;
+  font-family: var(--fonte-textos);
+  font-size: 0.92rem;
+  transition: color 0.2s ease;
+}
+
+.footerCol a:hover {
+  color: var(--marrom-detalhes);
+}
+
+/* Logo no footer */
+.footerLogo {
+  height: 180px;
+  width: auto;
+  object-fit: contain;
+  margin-bottom: 0.5rem;
+  /* filter: brightness(0) invert(1); deixa branco se o logo for escuro */
+}
+
+.footerCopy {
+  font-family: var(--fonte-textos);
+  font-size: 0.82rem;
+  color: var(--light1);
+  line-height: 1.6;
+  opacity: 0.75;
+  text-align: center;
+}
+
+/* Títulos das colunas */
+.footerTitle {
+  font-family: var(--fonte-titulos);
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--marrom-detalhes);
+  margin-bottom: 0.4rem;
+}
+
+/* Coluna de contato */
+.footerContact {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.footerContact a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+}
+
+/* Botão WhatsApp */
+.footerWhatsappBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: var(--marrom-detalhes);
+  color: #fff !important;
+  font-family: var(--fonte-textos);
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 0.6rem 1.2rem;
+  border-radius: 4px;
+  text-decoration: none !important;
+  transition: background-color 0.25s ease, transform 0.2s ease;
+  white-space: nowrap;
+}
+
+.footerWhatsappBtn:hover {
+  background-color: #b07d3e;
+  transform: translateY(-2px);
+}
+
+/* ===================== RESPONSIVO ===================== */
+@media (max-width: 1024px) {
+  .footerContainer {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .navLinks {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 120px;
+    left: 0;
+    width: 100%;
+    background-color: var(--marinho-principal);
+    padding: 1.5rem 2rem;
+    gap: 1.2rem;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  }
+
+  .navLinks.open {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .navbar {
+    padding: 0 1.5rem;
+  }
+}
+
+@media (max-width: 540px) {
+  .logo img {
+    height: 80px;
+  }
+
+  .footerContainer {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footerCol a,
+  .footerContact a {
+    justify-content: center;
+  }
+
+  .footerWhatsappBtn {
+    width: 100%;
+  }
+
+  .footer {
+    padding: 2.5rem 1.5rem 1.5rem;
+  }
+}
+
+html, body {
+  overflow-x: hidden;
+}

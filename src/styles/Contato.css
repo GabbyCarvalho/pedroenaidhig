@@ -1,0 +1,284 @@
+/* ===================== CONTATO.CSS ===================== */
+
+/* ── HERO CONTATO ── */
+.heroContato {
+  position: relative;
+  background-color: var(--marinho-principal);
+  padding: 8rem 2rem 6rem;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.heroContatoBg {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 50% 60%, rgba(202, 148, 87, 0.13) 0%, transparent 65%);
+  pointer-events: none;
+}
+
+.heroContatoContent {
+  position: relative;
+  max-width: 720px;
+}
+
+.heroContatoTitle {
+  font-family: var(--fonte-titulos);
+  font-size: clamp(2rem, 4.5vw, 3.4rem);
+  font-weight: 600;
+  color: var(--light2);
+  line-height: 1.2;
+  margin-bottom: 1.2rem;
+}
+
+.heroContatoSub {
+  font-family: var(--fonte-textos);
+  font-size: 1.05rem;
+  color: rgba(237, 237, 232, 0.75);
+  line-height: 1.75;
+  margin-bottom: 2rem;
+  max-width: 580px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.heroContatoPills {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.contatoPill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--fonte-textos);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--marrom-detalhes);
+  background: rgba(202, 148, 87, 0.1);
+  border: 1px solid rgba(202, 148, 87, 0.3);
+  border-radius: 50px;
+  padding: 0.4rem 1rem;
+  letter-spacing: 0.03em;
+}
+
+/* ── SEÇÃO CONTATO ── */
+.contatoSection {
+  padding: 6rem 0;
+  background: #fff;
+}
+
+.contatoGrid {
+  display: grid;
+  grid-template-columns: 1fr 1.35fr;
+  gap: 5rem;
+  align-items: start;
+}
+
+/* ── INFOS ── */
+.contatoInfoDesc {
+  font-family: var(--fonte-textos);
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.75;
+  margin-bottom: 2rem;
+}
+
+.contatoItens {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+  margin-bottom: 2.5rem;
+}
+
+.contatoItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.contatoItemIcon {
+  width: 42px;
+  height: 42px;
+  border-radius: 8px;
+  background: var(--light2);
+  border: 1px solid var(--light1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15rem;
+  color: var(--marrom-detalhes);
+  flex-shrink: 0;
+}
+
+.contatoItem > div:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.contatoItem strong {
+  font-family: var(--fonte-textos);
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--marinho-principal);
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+}
+
+.contatoItem span,
+.contatoItem a {
+  font-family: var(--fonte-textos);
+  font-size: 0.95rem;
+  color: #555;
+  text-decoration: none;
+}
+
+.contatoItem a:hover {
+  color: var(--marrom-detalhes);
+  text-decoration: underline;
+}
+
+.btnWa {
+  gap: 0.6rem;
+}
+
+/* ── FORMULÁRIO ── */
+.contatoFormWrap {
+  background: var(--light2);
+  border-radius: 12px;
+  padding: 3rem;
+}
+
+.contatoFormWrap h3 {
+  font-family: var(--fonte-titulos);
+  font-size: 1.6rem;
+  color: var(--marinho-principal);
+  margin-bottom: 0.4rem;
+}
+
+.formSubtitle {
+  font-family: var(--fonte-textos);
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 1.8rem;
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+/* reutiliza .formGroup, .sectionTag, .sectionTitle, .btnPrimary do Home.css */
+
+.btnEnviar {
+  width: 100%;
+  justify-content: center;
+  margin-top: 0.5rem;
+  transition: background-color 0.25s ease, transform 0.2s ease, opacity 0.2s ease;
+}
+
+/* ── LGPD ── */
+.lgpdBox {
+  background: #fff;
+  border: 1px solid var(--light1);
+  border-left: 3px solid var(--marrom-detalhes);
+  border-radius: 6px;
+  padding: 1rem 1.2rem;
+  margin-bottom: 1.2rem;
+}
+
+.lgpdLabel {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  cursor: pointer;
+}
+
+.lgpdCheck {
+  width: 17px;
+  height: 17px;
+  min-width: 17px;
+  margin-top: 3px;
+  accent-color: var(--marinho-principal);
+  cursor: pointer;
+}
+
+.lgpdLabel span {
+  font-family: var(--fonte-textos);
+  font-size: 0.82rem;
+  color: #555;
+  line-height: 1.65;
+}
+
+.lgpdLabel span a {
+  color: var(--marinho-principal);
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.lgpdLabel span a:hover {
+  color: var(--marrom-detalhes);
+}
+
+.lgpdLabel span strong {
+  color: var(--marinho-principal);
+}
+
+.lgpdNote {
+  font-family: var(--fonte-textos);
+  font-size: 0.75rem;
+  color: #999;
+  margin-top: 0.75rem;
+  text-align: center;
+}
+
+/* ── MAPA ── */
+.mapaContatoSection {
+  padding: 6rem 0;
+  background: var(--light2);
+}
+
+/* Reutiliza .mapaWrapper e .mapaEndereco do Home.css */
+.mapaContatoSection .mapaWrapper {
+  max-width: 800px;
+}
+
+/* ── RESPONSIVO ── */
+@media (max-width: 1024px) {
+  .contatoGrid {
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroContato {
+    padding: 6rem 1.5rem 4rem;
+  }
+
+  .contatoGrid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .contatoFormWrap {
+    padding: 2rem 1.5rem;
+  }
+
+  .formRow {
+    grid-template-columns: 1fr;
+  }
+
+  .heroContatoPills {
+    gap: 0.5rem;
+  }
+
+  .mapaContatoSection .mapaWrapper {
+    max-width: 100%;
+  }
+}
