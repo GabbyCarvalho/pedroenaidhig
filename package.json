@@ -2,7 +2,7 @@
   "name": "pedroenaidhig",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://github.com/GabbyCarvalho/pedroenaidhig.git",
+  "homepage": "https://gabbycarvalho.github.io/pedroenaidhig",
   "type": "module",
   "scripts": {
     "dev": "vite",
