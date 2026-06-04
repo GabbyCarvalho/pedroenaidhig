@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router-dom"
+import { createHashRouter } from "react-router-dom"
 //Layout
 import RootLayout from "./pages/layout/RootLayout"
 
@@ -12,7 +12,7 @@ import Faq from "./pages/Faq"
 import Contato from "./pages/Contato"
 import PoliticaPrivacidade from "./pages/subpages/Privacidade"
 
-const router = createBrowserRouter ([{
+const router = createHashRouter ([{
     path: "/",
     element: <RootLayout />,
     children: [
