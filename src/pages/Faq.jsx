@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { FiChevronDown, FiArrowRight } from "react-icons/fi";
 import { FaWhatsapp } from "react-icons/fa";
-import "../styles/FAQ.css";
+import "../styles/Faq.css";
 
 /* ─── FLOATING WHATSAPP BUTTON ─── */
 function FloatingWhatsApp() {
