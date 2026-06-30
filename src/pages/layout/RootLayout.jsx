@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link, Outlet } from "react-router-dom";
 import { FaWhatsapp, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { FiMail } from "react-icons/fi";
-import logo from "../../assets/logo.webp"; 
+import logo from "../../assets/logo.png"; 
 import ScroolToTop from "../../components/ScrollToTop"
 
 export default function RootLayout() {
@@ -20,7 +20,7 @@ export default function RootLayout() {
 
             {/* LOGO */}
             <Link to="/" className="logo" onClick={closeMenu}>
-              <img src={logo} alt="Pedro e Naidhig" className="logo" />
+              <img src={logo} alt="Pedro e Naidhig" className="logoImg" />
             </Link>
 
             {/* NAV LINKS — desktop */}
@@ -35,10 +35,10 @@ export default function RootLayout() {
 
             {/* SOCIAL ICONS — direita */}
             <div className="navSocials">
-              <a href="https://wa.me/SEUNUMERO" target="_blank" rel="noreferrer" aria-label="WhatsApp">
+              <a href="https://wa.me/551930200163" target="_blank" rel="noreferrer" aria-label="WhatsApp">
                 <FaWhatsapp />
               </a>
-              <a href="mailto:contato@pedroenaidhig.adv.br" aria-label="Email">
+              <a href="mailto:pnt@pntadvogados.com.br" aria-label="Email">
                 <FiMail />
               </a>
               <a href="https://www.instagram.com/SEUINSTAGRAM" target="_blank" rel="noreferrer" aria-label="Instagram">
@@ -79,6 +79,9 @@ export default function RootLayout() {
           <div className="footerCol">
             <img src={logo} alt="Pedro e Naidhig" className="footerLogo" />
             <p className="footerCopy">
+              OAB escritório: 62676 <br/>
+              CNPJ escritório: 62.347.819/0001-87 <br/> <br/>
+
               © 2026 Pedro & Naidhig Advogados Associados.<br />
               Todos os direitos reservados.
             </p>
@@ -110,11 +113,11 @@ export default function RootLayout() {
           <div className="footerCol">
             <h3 className="footerTitle">Contato</h3>
             <div className="footerContact">
-              <a href="https://wa.me/SEUNUMERO" target="_blank" rel="noreferrer">
-                <FaWhatsapp /> (19) 98999-9999
+              <a href="https://wa.me/551930200163" target="_blank" rel="noreferrer">
+                <FaWhatsapp /> (19) 3020-0163
               </a>
-              <a href="mailto:contato@pedroenaidhig.adv.br">
-                <FiMail /> contato@pedroenaidhig.adv.br
+              <a href="mailto:pnt@pntadvogados.com.br">
+                <FiMail /> pnt@pntadvogados.com.br
               </a>
               <a href="https://www.instagram.com/SEUINSTAGRAM" target="_blank" rel="noreferrer">
                 <FaInstagram /> Instagram
@@ -125,7 +128,7 @@ export default function RootLayout() {
               
             </div>
             <a
-              href="https://wa.me/SEUNUMERO"
+              href="https://wa.me/551930200163"
               target="_blank"
               rel="noreferrer"
               className="footerWhatsappBtn"

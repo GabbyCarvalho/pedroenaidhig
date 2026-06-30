@@ -63,7 +63,7 @@ function FloatingWhatsApp() {
   }, []);
   return (
     <a
-      href="https://wa.me/SEUNUMERO"
+      href="https://wa.me/551930200163"
       target="_blank"
       rel="noreferrer"
       aria-label="Falar pelo WhatsApp"
@@ -116,7 +116,7 @@ function IntroAreas() {
           Cada caso é tratado com dedicação, estratégia e total transparência.
         </p>
         <div className="areasIntroActions">
-          <a href="https://wa.me/SEUNUMERO" target="_blank" rel="noreferrer" className="btnPrimary">
+          <a href="https://wa.me/551930200163" target="_blank" rel="noreferrer" className="btnPrimary">
             <FaWhatsapp /> Consulta gratuita
           </a>
           <a href="#areas" className="btnOutline">
@@ -156,7 +156,7 @@ function AreasCTA() {
             Entre em contato. Nossa equipe avalia seu caso e indica o melhor caminho.
           </p>
         </div>
-        <a href="https://wa.me/SEUNUMERO" target="_blank" rel="noreferrer" className="btnPrimary btnLarge">
+        <a href="https://wa.me/551930200163" target="_blank" rel="noreferrer" className="btnPrimary btnLarge">
           <FaWhatsapp /> Falar com um advogado
         </a>
       </div>

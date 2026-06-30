@@ -1,8 +1,10 @@
 import "../styles/Home.css";
-
 import { useEffect, useRef, useState } from "react";
 import { FaWhatsapp, FaStar, FaRegStar } from "react-icons/fa";
 import { FiArrowRight, FiCheck, FiMapPin, FiMonitor, FiUsers, FiAward, FiShield, FiClock } from "react-icons/fi";
+import office from "../assets/home/office.jpeg"
+import victor from "../assets/home/victor.jpeg"
+import pedro from "../assets/home/pedro.jpeg"
 
 /* ─── FLOATING WHATSAPP BUTTON ─── */
 function FloatingWhatsApp() {
@@ -41,7 +43,7 @@ function Hero() {
           Atendimento presencial, online e híbrido em todo o Brasil.
         </p>
         <div className="heroActions">
-          <a href="https://wa.me/SEUNUMERO" target="_blank" rel="noreferrer" className="btnPrimary">
+          <a href="https://wa.me/551930200163" target="_blank" rel="noreferrer" className="btnPrimary">
             <FaWhatsapp /> Agendar consulta
           </a>
           <a href="#areas" className="btnOutline">
@@ -50,10 +52,7 @@ function Hero() {
         </div>
       </div>
       <div className="heroImage">
-        {/* Placeholder de foto — substitua pela imagem real */}
-        <div className="imgPlaceholder heroImg">
-          <span>Foto do escritório</span>
-        </div>
+        <img src={office} alt="Escritório Pedro & Naidhig" className="heroImg" />
       </div>
     </section>
   );
@@ -65,8 +64,8 @@ function QuemSomos() {
     <section className="section sobreSection" id="sobrenos">
       <div className="container sobreGrid">
         <div className="sobreFotos">
-          <div className="imgPlaceholder sobreFoto1"><span>Foto Dr. Pedro</span></div>
-          <div className="imgPlaceholder sobreFoto2"><span>Foto Dr. Naidhig</span></div>
+          <img src={pedro} alt="Dr. Pedro" className="sobreFoto1" />
+          <img src={victor} alt="Dr. Naidhig" className="sobreFoto2" />
         </div>
         <div className="sobreTexto">
           <span className="sectionTag">Quem somos</span>
@@ -305,7 +304,7 @@ function CTA() {
             Nossa equipe está pronta para ouvir e encontrar a melhor solução para o seu caso.
           </p>
           <a
-            href="https://wa.me/SEUNUMERO"
+            href="https://wa.me/551930200163"
             target="_blank"
             rel="noreferrer"
             className="btnPrimary btnLarge"

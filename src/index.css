@@ -6,7 +6,7 @@
 }
 
 :root {
-  --marinho-principal: #144062;
+  --marinho-principal: #0b3e63;
   --marrom-detalhes: #ca9457;
   --light1: #d9d9d9;
   --light2: #edede8;
@@ -32,6 +32,8 @@ header {
   z-index: 1000;
   background-color: var(--marinho-principal);
   box-shadow: 0 2px 16px rgba(20, 64, 98, 0.18);
+  
+ 
 }
 
 .topBar {
@@ -46,6 +48,7 @@ header {
   height: 100%;
   padding: 0 3rem;
   gap: 2rem;
+  overflow: visible;
 }
 
 /* LOGO */
@@ -53,10 +56,16 @@ header {
   display: flex;
   align-items: center;
   flex-shrink: 0;
+  overflow: visible;
 }
 
 .logo img {
-  height: 110px;
+  height: 100px;
+  width: auto;
+  object-fit: contain;
+}
+.logoImg {
+  height: 200px;
   width: auto;
   object-fit: contain;
 }

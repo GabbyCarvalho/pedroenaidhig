@@ -4,6 +4,7 @@ import { FiArrowRight } from "react-icons/fi";
 import { FaWhatsapp } from "react-icons/fa";
 import victor from "../assets/sobrenos/victor.webp";
 import rafael from "../assets/sobrenos/Rafael.webp";
+import office2 from "../assets/sobrenos/office.jpeg"
 
 const advogados = [
   {
@@ -22,7 +23,7 @@ const advogados = [
     nome: "Rafael Henrique Pedro",
     foto: rafael,
     lado: "esquerda",
-    oab: "OAB/SP 000.000",
+    oab: "OAB/SP 329.648",
     descricao: [
       "Advogado formado em Direito pela PUC Campinas e pós-graduado em Direito Imobiliário pela Escola Superior de Advocacia (ESA).",
       "Com uma trajetória sólida e marcada pela excelência, oferece atendimento consultivo de alto nível para síndicos e administradoras de condomínio, aliado a uma experiência prática que poucos profissionais possuem: ao longo de sua carreira, atuou também como síndico profissional.",
@@ -42,7 +43,7 @@ function FloatingWhatsApp() {
   }, []);
   return (
     <a
-      href="https://wa.me/SEUNUMERO"
+      href="https://wa.me/551930200163"
       target="_blank"
       rel="noreferrer"
       aria-label="Falar pelo WhatsApp"
@@ -76,7 +77,7 @@ function AdvogadoCard({ advogado }) {
           ))}
         </div>
         <a
-          href="https://wa.me/SEUNUMERO"
+          href="https://wa.me/551930200163"
           target="_blank"
           rel="noreferrer"
           className="btnPrimary"
@@ -112,22 +113,8 @@ export default function SobreNos() {
           </p>
         </div>
         <div className="sobreHeroImagem">
-          {/* troque por uma imagem decorativa se quiser */}
           <div className="imgPlaceholder sobreHeroImg">
-            <span>Foto decorativa / escritório</span>
-          </div>
-        </div>
-      </section>
-
-      {/* ── ADVOGADOS ── */}
-      <section className="advSection">
-        <div className="advContainer">
-          <span className="sectionTag center">Nossa equipe</span>
-          <h2 className="sectionTitle center">Conheça os advogados</h2>
-          <div className="advList">
-            {advogados.map((adv) => (
-              <AdvogadoCard key={adv.nome} advogado={adv} />
-            ))}
+          <img src={office2} alt="office" className="sobreHeroImg" />
           </div>
         </div>
       </section>
@@ -154,6 +141,21 @@ export default function SobreNos() {
         </div>
       </section>
 
+      {/* ── ADVOGADOS ── */}
+      <section className="advSection">
+        <div className="advContainer">
+          <span className="sectionTag center">Nossa equipe</span>
+          <h2 className="sectionTitle center">Conheça os advogados</h2>
+          <div className="advList">
+            {advogados.map((adv) => (
+              <AdvogadoCard key={adv.nome} advogado={adv} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+
+
       {/* ── CTA ── */}
       <section className="sobreCtaSection">
         <div className="advContainer sobreCtaGrid">
@@ -162,7 +164,7 @@ export default function SobreNos() {
             <p>Entre em contato e agende sua consulta. Atendemos de forma presencial, online ou híbrida.</p>
           </div>
           <a
-            href="https://wa.me/SEUNUMERO"
+            href="https://wa.me/551930200163"
             target="_blank"
             rel="noreferrer"
             className="btnPrimary btnLarge"

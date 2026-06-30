@@ -69,7 +69,7 @@ function FloatingWhatsApp() {
   }, []);
   return (
     <a
-      href="https://wa.me/SEUNUMERO"
+      href="https://wa.me/551930200163"
       target="_blank"
       rel="noreferrer"
       aria-label="Falar pelo WhatsApp"
@@ -175,7 +175,7 @@ export default function BlogPost() {
           </p>
           <div className="postCtaActions">
             <a
-              href="https://wa.me/SEUNUMERO"
+              href="https://wa.me/551930200163"
               target="_blank"
               rel="noreferrer"
               className="btnPrimary"

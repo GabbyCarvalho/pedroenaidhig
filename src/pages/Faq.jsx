@@ -13,7 +13,7 @@ function FloatingWhatsApp() {
   }, []);
   return (
     <a
-      href="https://wa.me/SEUNUMERO"
+      href="https://wa.me/551930200163"
       target="_blank"
       rel="noreferrer"
       aria-label="Falar pelo WhatsApp"
@@ -187,7 +187,7 @@ export default function FAQ() {
                 sigiloso e sem compromisso.
               </p>
               <a
-                href="https://wa.me/SEUNUMERO"
+                href="https://wa.me/551930200163"
                 target="_blank"
                 rel="noreferrer"
                 className="btnPrimary"
@@ -222,7 +222,7 @@ export default function FAQ() {
           <h2>Pronto para resolver sua questão jurídica?</h2>
           <p>Consulta inicial rápida e sem burocracia. Presencial ou online.</p>
           <a
-            href="https://wa.me/SEUNUMERO"
+            href="https://wa.me/551930200163"
             target="_blank"
             rel="noreferrer"
             className="btnPrimary btnLarge"
