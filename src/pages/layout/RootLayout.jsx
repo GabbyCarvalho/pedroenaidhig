@@ -38,15 +38,8 @@ export default function RootLayout() {
               <a href="https://wa.me/551930200163" target="_blank" rel="noreferrer" aria-label="WhatsApp">
                 <FaWhatsapp />
               </a>
-              <a href="mailto:pnt@pntadvogados.com.br" aria-label="Email">
-                <FiMail />
-              </a>
               <a href="https://www.instagram.com/SEUINSTAGRAM" target="_blank" rel="noreferrer" aria-label="Instagram">
                 <FaInstagram />
-              </a>
-
-              <a href="https://www.linkedin.com/in/SEULINKEDIN" target="_blank" rel="noreferrer" aria-label="LinkedIn">
-              <FaLinkedinIn />
               </a>
 
             </div>
