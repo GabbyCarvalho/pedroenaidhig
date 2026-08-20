@@ -1,7 +1,7 @@
 import "../styles/Home.css";
 import { useEffect, useRef, useState } from "react";
 import { FaWhatsapp, FaStar, FaRegStar } from "react-icons/fa";
-import { FiArrowRight, FiCheck, FiMapPin, FiMonitor, FiUsers, FiAward, FiShield, FiClock } from "react-icons/fi";
+import { FiArrowRight, FiCheck, FiMapPin, FiMonitor, FiUsers, FiAward, FiShield, FiClock, FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import office from "../assets/home/office.jpeg"
 import victor from "../assets/home/victor.jpeg"
 import pedro from "../assets/home/pedro.jpeg"
@@ -53,6 +53,113 @@ function Hero() {
       </div>
       <div className="heroImage">
         <img src={office} alt="Escritório Pedro & Naidhig" className="heroImg" />
+      </div>
+    </section>
+  );
+}
+
+/* ─── NOSSOS VALORES ─── */
+/* ─── NOSSOS VALORES ─── */
+function Valores() {
+  const valores = [
+    {
+      title: "Transparência",
+      desc: "Acreditamos que relações duradouras são construídas com transparência, confiança e comprometimento. Por isso, mantemos uma comunicação clara e contínua em todas as etapas, compartilhando informações sobre o andamento dos processos, honorários e estratégias adotadas. Nossos clientes têm acesso facilitado aos detalhes relevantes de seus casos, garantindo total acompanhamento, segurança e tranquilidade na tomada de decisões.",
+    },
+    {
+      title: "Respeito aos clientes",
+      desc: " Acreditamos que um atendimento de excelência começa pela compreensão das necessidades de cada cliente. Por isso, desenvolvemos estratégias personalizadas e oferecemos acompanhamento próximo em todas as etapas, construindo relações sólidas baseadas em confiança, respeito e comprometimento.",
+    },
+    {
+      title: "Eficiência",
+      desc: "Sabemos que o tempo dos nossos clientes é valioso. Por isso, aliamos tecnologia, estratégia e processos eficientes para tornar cada etapa mais ágil, organizada e precisa. Nossa atuação é focada em soluções objetivas e eficazes, buscando reduzir custos, otimizar processos e alcançar os melhores resultados para cada caso.",
+    },
+  ];
+
+  const total = valores.length;
+  const [index, setIndex] = useState(0);
+  const [showHint, setShowHint] = useState(true);
+  const sliderRef = useRef(null);
+
+  const goTo = (i) => {
+    setIndex(i);
+    const slider = sliderRef.current;
+    const slide = slider?.children[i];
+    if (slide) {
+      slide.scrollIntoView({ behavior: "smooth", inline: "start", block: "nearest" });
+    }
+  };
+
+  const next = () => goTo((index + 1) % total);
+  const prev = () => goTo((index - 1 + total) % total);
+
+  const handleScroll = () => {
+    setShowHint(false);
+    const slider = sliderRef.current;
+    if (!slider) return;
+    const newIndex = Math.round(slider.scrollLeft / slider.clientWidth);
+    setIndex(newIndex);
+  };
+
+  return (
+    <section className="section valoresSection" id="valores">
+      <div className="container">
+        <span className="sectionTag center">Nossos valores</span>
+        <h2 className="sectionTitle center">O que guia o nosso trabalho</h2>
+
+        <div className="valoresCarousel">
+          <button
+            className="carouselArrow carouselArrowLeft"
+            onClick={prev}
+            aria-label="Valor anterior"
+          >
+            <FiChevronLeft />
+          </button>
+
+          <div className="valoresTrack">
+            <div
+              className="valoresSlider"
+              ref={sliderRef}
+              onScroll={handleScroll}
+              style={{ transform: `translateX(-${index * 100}%)` }}
+            >
+              {valores.map((v, i) => (
+                <div className="valorSlide" key={i}>
+                  <div className="valorCard">
+                    <div className="valorLine" />
+                    <h3>{v.title}</h3>
+                    <p>{v.desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {showHint && (
+              <div className="swipeHint">
+                <FiChevronRight /> Arraste para o lado
+              </div>
+            )}
+          </div>
+
+          <button
+            className="carouselArrow carouselArrowRight"
+            onClick={next}
+            aria-label="Próximo valor"
+          >
+            <FiChevronRight />
+          </button>
+        </div>
+
+        <div className="carouselDots">
+          {valores.map((_, i) => (
+            <button
+              key={i}
+              className={`carouselDot ${i === index ? "carouselDotActive" : ""}`}
+              onClick={() => goTo(i)}
+              aria-label={`Ir para o valor ${i + 1}`}
+            />
+          ))}
+        </div>
       </div>
     </section>
   );
@@ -242,21 +349,18 @@ function Diferenciais() {
 function Depoimentos() {
   const reviews = [
     {
-      name: "Ana Carolina S.",
-      role: "Cliente – Direito Trabalhista",
-      text: "Fui muito bem atendida desde o primeiro contato. Eles explicaram tudo com clareza e conseguimos um resultado excelente na minha causa. Recomendo sem hesitar.",
+      name: "Rafael B.",
+      text: "Estava com problemas com meu convenio médico, o escritório prontamente me deu todas as coordenadas para solucionar o problema e ficou a disposição caso fosse necessário entrar com uma ação para conseguir meus direitos. Tratei com o Dr Victor, recomendo.",
       stars: 5,
     },
     {
-      name: "Marcos Oliveira",
-      role: "Cliente – Direito Civil",
-      text: "O atendimento online foi incrível, consegui resolver tudo sem sair de casa. Profissionais extremamente competentes e sempre disponíveis para tirar dúvidas.",
+      name: "Maycon R.",
+      text: "Excelente atendimento do início ao fim. O escritório conduziu todo o processo de inventário com muito profissionalismo, transparência e agilidade, sempre esclarecendo minhas dúvidas.Recomendo pelos serviços prestados e pelo comprometimento de toda a equipe.",
       stars: 5,
     },
     {
-      name: "Fernanda R.",
-      role: "Empresária – Direito Societário",
-      text: "Contratei para assessoria da minha empresa e o suporte foi fundamental. Organização, agilidade e muita transparência durante todo o processo.",
+      name: "Natalia Q.",
+      text: "Tive um processo contra o banco e fui atendida pelo Victor Naidhig, que foi extremamente atencioso durante todo o processo. Conseguiu resolver a questão de forma rápida e eficiente, sempre com muita atenção e profissionalismo. Fiquei muito satisfeita com o atendimento e super recomendo!",
       stars: 5,
     },
   ];
@@ -390,6 +494,7 @@ export default function Home() {
   return (
     <>
       <Hero />
+      <Valores />
       <QuemSomos />
       <Processo />
       <Atuacao />

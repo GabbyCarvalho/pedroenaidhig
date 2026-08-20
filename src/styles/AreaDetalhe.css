@@ -1,0 +1,245 @@
+/* ===================== AREADETALHE.CSS ===================== */
+
+.areaDetPage {
+    background-color: #fff;
+  }
+  
+  /* ── HERO ── */
+  .areaDetHero {
+    position: relative;
+    background-color: var(--marinho-principal);
+    padding: 4rem 2rem 5rem;
+    text-align: center;
+    overflow: hidden;
+  }
+  
+  .areaDetHeroBg {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 50% 70%, rgba(202, 148, 87, 0.12) 0%, transparent 60%);
+    pointer-events: none;
+  }
+  
+  .areaDetHeroInner {
+    position: relative;
+    max-width: 640px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6rem;
+  }
+  
+  .areaDetBadge {
+    width: 56px;
+    height: 56px;
+    border-radius: 14px;
+    background: rgba(202, 148, 87, 0.15);
+    border: 1px solid rgba(202, 148, 87, 0.35);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    color: var(--marrom-detalhes);
+    margin-bottom: 0.5rem;
+  }
+  
+  .areaDetHeroTitle {
+    font-family: var(--fonte-titulos);
+    font-size: clamp(2.2rem, 5vw, 3.2rem);
+    font-weight: 600;
+    color: var(--light2);
+    line-height: 1.15;
+    margin: 0;
+  }
+  
+  .areaDetHeroSub {
+    font-family: var(--fonte-textos);
+    font-size: 0.95rem;
+    color: rgba(237, 237, 232, 0.65);
+    line-height: 1.7;
+    margin: 0.25rem 0 0;
+    max-width: 520px;
+  }
+  
+  /* ── INTRO ── */
+  .areaDetIntro {
+    background: var(--light2);
+    padding: 2.5rem 2rem;
+    border-bottom: 1px solid var(--light1);
+  }
+  
+  .areaDetIntro p {
+    font-family: var(--fonte-textos);
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.8;
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  
+  .areaDetIntro strong {
+    color: var(--marinho-principal);
+  }
+  
+  /* ── CONTAINER ── */
+  .areaDetContainer {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+  
+  /* ── SEÇÕES ── */
+  .areaDetSections {
+    padding: 5rem 0;
+  }
+  
+  .areaDetCard {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    padding: 2.5rem 0;
+    border-bottom: 1px solid var(--light1);
+  }
+  
+  .areaDetCard:last-child {
+    border-bottom: none;
+  }
+  
+  .areaDetCardIcon {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    border-radius: 10px;
+    background: var(--light2);
+    border: 1px solid var(--light1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: var(--marrom-detalhes);
+    margin-top: 3px;
+  }
+  
+  .areaDetCardBody {
+    flex: 1;
+  }
+  
+  .areaDetCardTitle {
+    font-family: var(--fonte-titulos);
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--marinho-principal);
+    margin: 0 0 0.9rem;
+  }
+  
+  .areaDetCardContent p {
+    font-family: var(--fonte-textos);
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 0.75rem;
+  }
+  
+  .areaDetCardContent p:last-child {
+    margin-bottom: 0;
+  }
+  
+  .areaDetCardContent strong {
+    color: var(--marinho-principal);
+    font-weight: 600;
+  }
+  
+  /* ── LISTA ── */
+  .areaDetList {
+    list-style: none;
+    padding: 0;
+    margin: 0.75rem 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+  }
+  
+  .areaDetList li {
+    font-family: var(--fonte-textos);
+    font-size: 0.93rem;
+    color: #555;
+    line-height: 1.6;
+    padding-left: 1.4rem;
+    position: relative;
+  }
+  
+  .areaDetList li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.55em;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: var(--marrom-detalhes);
+  }
+  
+  /* ── FOOTER CTA (WhatsApp) ── */
+  .areaDetFooterCta {
+    background: var(--light2);
+    border-top: 1px solid var(--light1);
+    padding: 3.5rem 2rem;
+  }
+  
+  .areaDetFooterInner {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+  
+  .areaDetFooterIcon {
+    font-size: 2rem;
+    color: var(--marrom-detalhes);
+    flex-shrink: 0;
+  }
+  
+  .areaDetFooterInner > div {
+    flex: 1;
+    min-width: 200px;
+  }
+  
+  .areaDetFooterInner h3 {
+    font-family: var(--fonte-titulos);
+    font-size: 1.25rem;
+    color: var(--marinho-principal);
+    margin: 0 0 0.3rem;
+  }
+  
+  .areaDetFooterInner p {
+    font-family: var(--fonte-textos);
+    font-size: 0.9rem;
+    color: #777;
+    margin: 0;
+  }
+  
+  /* ── RESPONSIVO ── */
+  @media (max-width: 768px) {
+    .areaDetHero {
+      padding: 5rem 1.5rem 3.5rem;
+    }
+  
+    .areaDetCard {
+      flex-direction: column;
+      gap: 1.2rem;
+      padding: 2rem 0;
+    }
+  
+    .areaDetFooterInner {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1.2rem;
+    }
+  
+    .areaDetFooterInner .btnPrimary {
+      width: 100%;
+      justify-content: center;
+    }
+  }
