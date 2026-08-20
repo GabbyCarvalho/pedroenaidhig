@@ -844,6 +844,9 @@
   text-align: center;
 }
 
+.swipeHint {
+  display: none;
+}
 
 /* ===================== RESPONSIVO ===================== */
 @media (max-width: 1024px) {
@@ -1016,6 +1019,7 @@
         }
     
         .swipeHint {
+          display: flex;
           position: absolute;
           bottom: -0.1rem;
           left: 50%;
