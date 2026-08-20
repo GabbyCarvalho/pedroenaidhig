@@ -308,7 +308,9 @@ header {
   .logo img {
     height: 80px;
   }
-
+  .footerCol{
+    align-items: center;
+  }
   .footerContainer {
     grid-template-columns: 1fr;
     text-align: center;
