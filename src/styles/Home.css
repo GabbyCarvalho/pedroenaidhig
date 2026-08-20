@@ -1,5 +1,8 @@
 /* ===================== HOME.CSS ===================== */
-
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
 /* ── UTILITÁRIOS ── */
 .container {
   max-width: 1200px;
@@ -223,6 +226,7 @@
   width: 100%;
   aspect-ratio: 4/5;
   border-radius: 12px;
+  object-fit: cover
 }
 
 .hero .heroImage {
@@ -379,6 +383,7 @@
   border: 5px solid #fff;
   box-shadow: 0 8px 30px rgba(0,0,0,0.12);
   z-index: 1;
+  object-fit: cover
 }
 
 .sobreSection .sobreFoto2 {
@@ -390,6 +395,7 @@
   border: 5px solid #fff;
   box-shadow: 0 8px 30px rgba(0,0,0,0.12);
   z-index: 2;
+  object-fit: cover
 }
 
 .sobreTexto p {
