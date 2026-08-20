@@ -308,6 +308,9 @@ header {
   .logo img {
     height: 80px;
   }
+  .footerLogo {
+    height: 70px;
+  }
   .footerCol{
     align-items: center;
   }
