@@ -349,18 +349,23 @@ function Diferenciais() {
 function Depoimentos() {
   const reviews = [
     {
-      name: "Ana Carolina S.",
-      text: "Fui muito bem atendida desde o primeiro contato. Eles explicaram tudo com clareza e conseguimos um resultado excelente na minha causa. Recomendo sem hesitar.",
+      name: "Augusto G.",
+      text: "Profissionais atenciosos, cuidaram do meu caso, que já havia passado por três escritórios sem resolução. Ganharam um cliente!!",
       stars: 5,
     },
     {
-      name: "Marcos Oliveira",
-      text: "O atendimento online foi incrível, consegui resolver tudo sem sair de casa. Profissionais extremamente competentes e sempre disponíveis para tirar dúvidas.",
+      name: "Ronaldo R.",
+      text: "Cuidaram cuidadosamente do processo, cada etapa importante nos notificou, foram solícitos, orientaram em cada etapa corretamente e obtivemos êxito. Estamos muito gratos.",
       stars: 5,
     },
     {
-      name: "Fernanda R.",
-      text: "Contratei para assessoria da minha empresa e o suporte foi fundamental. Organização, agilidade e muita transparência durante todo o processo.",
+      name: "Natalia  Q.",
+      text: "Tive um processo contra o banco e fui atendida pelo Victor Naidhig, que foi extremamente atencioso durante todo o processo. Conseguiu resolver a questão de forma rápida e eficiente, sempre com muita atenção e profissionalismo. Fiquei muito satisfeita com o atendimento e super recomendo!.",
+      stars: 5,
+    },
+    {
+      name: "Maycon R.",
+      text: "Excelente atendimento do início ao fim.O escritório conduziu todo o processo de inventário com muito profissionalismo, transparência e agilidade, sempre esclarecendo minhas dúvidas.Recomendo pelos serviços prestados e pelo comprometimento de toda a equipe.",
       stars: 5,
     },
   ];
