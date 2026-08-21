@@ -349,50 +349,98 @@ function Diferenciais() {
 function Depoimentos() {
   const reviews = [
     {
-      name: "Rafael B.",
-      text: "Estava com problemas com meu convenio médico, o escritório prontamente me deu todas as coordenadas para solucionar o problema e ficou a disposição caso fosse necessário entrar com uma ação para conseguir meus direitos. Tratei com o Dr Victor, recomendo.",
+      name: "Ana Carolina S.",
+      text: "Fui muito bem atendida desde o primeiro contato. Eles explicaram tudo com clareza e conseguimos um resultado excelente na minha causa. Recomendo sem hesitar.",
       stars: 5,
     },
     {
-      name: "Maycon R.",
-      text: "Excelente atendimento do início ao fim. O escritório conduziu todo o processo de inventário com muito profissionalismo, transparência e agilidade, sempre esclarecendo minhas dúvidas.Recomendo pelos serviços prestados e pelo comprometimento de toda a equipe.",
+      name: "Marcos Oliveira",
+      text: "O atendimento online foi incrível, consegui resolver tudo sem sair de casa. Profissionais extremamente competentes e sempre disponíveis para tirar dúvidas.",
       stars: 5,
     },
     {
-      name: "Natalia Q.",
-      text: "Tive um processo contra o banco e fui atendida pelo Victor Naidhig, que foi extremamente atencioso durante todo o processo. Conseguiu resolver a questão de forma rápida e eficiente, sempre com muita atenção e profissionalismo. Fiquei muito satisfeita com o atendimento e super recomendo!",
+      name: "Fernanda R.",
+      text: "Contratei para assessoria da minha empresa e o suporte foi fundamental. Organização, agilidade e muita transparência durante todo o processo.",
       stars: 5,
     },
   ];
+
+  const total = reviews.length;
+  const [index, setIndex] = useState(0);
+  const [showHint, setShowHint] = useState(true);
+  const sliderRef = useRef(null);
+
+  const goTo = (i) => {
+    setIndex(i);
+    const slider = sliderRef.current;
+    const slide = slider?.children[i];
+    if (slide) {
+      slide.scrollIntoView({ behavior: "smooth", inline: "start", block: "nearest" });
+    }
+  };
+
+  const handleScroll = () => {
+    setShowHint(false);
+    const slider = sliderRef.current;
+    if (!slider) return;
+    const newIndex = Math.round(slider.scrollLeft / slider.clientWidth);
+    setIndex(newIndex);
+  };
+
   return (
     <section className="section depoimentosSection" id="depoimentos">
       <div className="container">
         <span className="sectionTag center">Depoimentos</span>
         <h2 className="sectionTitle center">O que dizem nossos clientes</h2>
-        <div className="depoimentosGrid">
-          {reviews.map((r, i) => (
-            <div className="depoimentoCard" key={i}>
-              <div className="stars">
-                {[...Array(5)].map((_, s) =>
-                  s < r.stars ? <FaStar key={s} className="starFill" /> : <FaRegStar key={s} />
-                )}
-              </div>
-              <p className="depoimentoText">"{r.text}"</p>
-              <div className="depoimentoAuthor">
-                <div className="avatarCircle">{r.name.charAt(0)}</div>
-                <div>
-                  <strong>{r.name}</strong>
-                  <span>{r.role}</span>
+
+        <div className="depoimentosTrack">
+          <div
+            className="depoimentosGrid"
+            ref={sliderRef}
+            onScroll={handleScroll}
+          >
+            {reviews.map((r, i) => (
+              <div className="depoimentoSlide" key={i}>
+                <div className="depoimentoCard">
+                  <div className="stars">
+                    {[...Array(5)].map((_, s) =>
+                      s < r.stars ? <FaStar key={s} className="starFill" /> : <FaRegStar key={s} />
+                    )}
+                  </div>
+                  <p className="depoimentoText">"{r.text}"</p>
+                  <div className="depoimentoAuthor">
+                    <div className="avatarCircle">{r.name.charAt(0)}</div>
+                    <div>
+                      <strong>{r.name}</strong>
+                      <span>{r.role}</span>
+                    </div>
+                  </div>
                 </div>
               </div>
+            ))}
+          </div>
+
+          {showHint && (
+            <div className="swipeHint">
+              <FiChevronRight /> Arraste para o lado
             </div>
+          )}
+        </div>
+
+        <div className="carouselDots depoimentosDots">
+          {reviews.map((_, i) => (
+            <button
+              key={i}
+              className={`carouselDot ${i === index ? "carouselDotActive" : ""}`}
+              onClick={() => goTo(i)}
+              aria-label={`Ir para o depoimento ${i + 1}`}
+            />
           ))}
         </div>
       </div>
     </section>
   );
 }
-
 /* ─── CTA ─── */
 function CTA() {
   const [lgpd, setLgpd] = useState(false);

@@ -113,9 +113,7 @@ export default function SobreNos() {
           </p>
         </div>
         <div className="sobreHeroImagem">
-          <div className="imgPlaceholder sobreHeroImg">
           <img src={office2} alt="office" className="sobreHeroImg" />
-          </div>
         </div>
       </section>
 
