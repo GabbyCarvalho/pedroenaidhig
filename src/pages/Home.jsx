@@ -359,15 +359,11 @@ function Depoimentos() {
       stars: 5,
     },
     {
-      name: "Natalia  Q.",
-      text: "Tive um processo contra o banco e fui atendida pelo Victor Naidhig, que foi extremamente atencioso durante todo o processo. Conseguiu resolver a questão de forma rápida e eficiente, sempre com muita atenção e profissionalismo. Fiquei muito satisfeita com o atendimento e super recomendo!.",
-      stars: 5,
-    },
-    {
       name: "Maycon R.",
       text: "Excelente atendimento do início ao fim.O escritório conduziu todo o processo de inventário com muito profissionalismo, transparência e agilidade, sempre esclarecendo minhas dúvidas.Recomendo pelos serviços prestados e pelo comprometimento de toda a equipe.",
       stars: 5,
     },
+
   ];
 
   const total = reviews.length;
