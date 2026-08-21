@@ -359,8 +359,8 @@ function Depoimentos() {
       stars: 5,
     },
     {
-      name: "Maycon R.",
-      text: "Excelente atendimento do início ao fim.O escritório conduziu todo o processo de inventário com muito profissionalismo, transparência e agilidade, sempre esclarecendo minhas dúvidas.Recomendo pelos serviços prestados e pelo comprometimento de toda a equipe.",
+      name: "Rafaela C.",
+      text: "Excelentes profissionais! Capacitados e super atenciosos! Já os contratei mais de uma vez e super indico!",
       stars: 5,
     },
 
