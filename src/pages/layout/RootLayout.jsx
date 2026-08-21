@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, Outlet } from "react-router-dom";
-import { FaWhatsapp, FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import { FaWhatsapp, FaInstagram} from "react-icons/fa";
 import { FiMail } from "react-icons/fi";
 import logo from "../../assets/logo.png"; 
 import ScroolToTop from "../../components/ScrollToTop"
@@ -38,7 +38,7 @@ export default function RootLayout() {
               <a href="https://wa.me/551930200163" target="_blank" rel="noreferrer" aria-label="WhatsApp">
                 <FaWhatsapp />
               </a>
-              <a href="https://www.instagram.com/SEUINSTAGRAM" target="_blank" rel="noreferrer" aria-label="Instagram">
+              <a href="https://www.instagram.com/pnt.advogados?igsi=NGMzdzBlZ25pb2J2" target="_blank" rel="noreferrer" aria-label="Instagram">
                 <FaInstagram />
               </a>
 
@@ -112,11 +112,8 @@ export default function RootLayout() {
               <a href="mailto:pnt@pntadvogados.com.br">
                 <FiMail /> pnt@pntadvogados.com.br
               </a>
-              <a href="https://www.instagram.com/SEUINSTAGRAM" target="_blank" rel="noreferrer">
+              <a href="https://www.instagram.com/pnt.advogados?igsi=NGMzdzBlZ25pb2J2" target="_blank" rel="noreferrer">
                 <FaInstagram /> Instagram
-              </a>
-              <a href="https://www.linkedin.com/in/SEULINKEDIN" target="_blank" rel="noreferrer">
-                <FaLinkedinIn /> LinkedIn
               </a>
               
             </div>

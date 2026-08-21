@@ -2,7 +2,7 @@ import "../styles/Contato.css";
 
 import { useState } from "react";
 import { FaWhatsapp } from "react-icons/fa";
-import { FiArrowRight, FiMapPin, FiPhone, FiMail, FiClock, FiCheck } from "react-icons/fi";
+import { FiArrowRight, FiMapPin, FiMail, FiClock, FiCheck } from "react-icons/fi";
 
 /* ─── HERO CONTATO ─── */
 function HeroContato() {
@@ -61,19 +61,11 @@ function FormContato() {
             </div>
 
             <div className="contatoItem">
-              <div className="contatoItemIcon"><FiPhone /></div>
-              <div>
-                <strong>Telefone</strong>
-                <span>(19) 3333-3333</span>
-              </div>
-            </div>
-
-            <div className="contatoItem">
               <div className="contatoItemIcon"><FiMail /></div>
               <div>
                 <strong>E-mail</strong>
-                <a href="mailto:contato@escritorio.adv.br">
-                  contato@escritorio.adv.br
+                <a href="mailto:pnt@pntadvogados.com.br">
+                pnt@pntadvogados.com.br
                 </a>
               </div>
             </div>
