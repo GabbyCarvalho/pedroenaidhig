@@ -354,8 +354,8 @@ function Depoimentos() {
       stars: 5,
     },
     {
-      name: "Ronaldo R.",
-      text: "Cuidaram cuidadosamente do processo, cada etapa importante nos notificou, foram solícitos, orientaram em cada etapa corretamente e obtivemos êxito. Estamos muito gratos.",
+      name: "Eline P.",
+      text: "Excelentes profissionais! Sempre muito atenciosos e comprometidos com a resolução dos meus processos da maneira mais eficaz.",
       stars: 5,
     },
     {
