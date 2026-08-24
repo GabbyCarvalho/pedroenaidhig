@@ -58,7 +58,7 @@ function Hero() {
   );
 }
 
-/* ─── NOSSOS VALORES ─── */
+
 /* ─── NOSSOS VALORES ─── */
 function Valores() {
   const valores = [
@@ -83,10 +83,12 @@ function Valores() {
 
   const goTo = (i) => {
     setIndex(i);
-    const slider = sliderRef.current;
-    const slide = slider?.children[i];
-    if (slide) {
-      slide.scrollIntoView({ behavior: "smooth", inline: "start", block: "nearest" });
+    if (window.innerWidth <= 768) {
+      const slider = sliderRef.current;
+      const slide = slider?.children[i];
+      if (slide) {
+        slide.scrollIntoView({ behavior: "smooth", inline: "start", block: "nearest" });
+      }
     }
   };
 
