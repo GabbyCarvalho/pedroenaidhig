@@ -3,7 +3,7 @@ name: Deploy React to TurboCloud FTP
 on:
   push:
     branches:
-      - main # Executa a automação toda vez que você fizer push na branch main (altere se sua branch principal for 'master')
+      - main # Mude para master se o nome da sua branch principal for master
 
 jobs:
   web-deploy:
@@ -16,11 +16,11 @@ jobs:
       - name: ⚙️ Configurar ambiente Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
           cache: 'npm'
 
       - name: 📦 Instalar dependências
-        run: npm ci
+        run: npm install
 
       - name: 🏗️ Gerar o Build de Produção
         run: npm run build
@@ -31,6 +31,8 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./dist/ # Se seu projeto usa Create React App altere para ./build/
+          port: 21
+          local-dir: ./dist/
           server-dir: /public_html/
-          dangerous-clean-slate: false # Impede que arquivos fora da pasta do React (como pastas de e-mail) sejam apagados
+          security-option: loose
+          dangerous-clean-slate: false
